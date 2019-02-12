@@ -47,7 +47,7 @@ class user:
         test_user = user("Test","user","0711223344","test@user.com") # new usert
         test_user.save_user()
 
-       user_exists = user.user_exist("0711223344")
+        user_exists = user.user_exist("0711223344")
 
         self.assertTrue(user_exists)
          
