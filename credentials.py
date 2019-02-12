@@ -1,5 +1,4 @@
 
-import re 
 class credentials
    password_list = []
   def get_password(self):
