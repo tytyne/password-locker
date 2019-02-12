@@ -10,22 +10,22 @@ class credentials
 psswrd = "demo123"
 flag = 0
 while True:   
-    if (len(password)<8): 
+    if (len(psswrd)<8): 
         flag = -1
         break
-    elif not re.search("[a-z]", password): 
+    elif not re.search("[a-z]", psswrd): 
         flag = -1
         break
-    elif not re.search("[A-Z]", password): 
+    elif not re.search("[A-Z]", psswrd): 
         flag = -1
         break
-    elif not re.search("[0-9]", password): 
+    elif not re.search("[0-9]", psswrd): 
         flag = -1
         break
-    elif not re.search("[_@$]", password): 
+    elif not re.search("[_@$]", psswrd): 
         flag = -1
         break
-    elif re.search("\s", password): 
+    elif re.search("\s", psswrd): 
         flag = -1
         break
     else: 
