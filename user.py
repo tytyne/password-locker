@@ -2,21 +2,21 @@
 
 import pyperclip
 
-class Contact:
+class user:
     """
-    Class that generates new instances of contacts.
+    Class that generates new instances of users.
     """
 
-    contact_list = [] # Empty contact list
+    user_list = [] # Empty user list
 
  # Init method up here
-    def save_contact(self):
+    def save_user(self):
 
         '''
-        save_contact method saves contact objects into contact_list
+        save_user method saves user objects into user_list
         '''
 
-        Contact.contact_list.append(self)
+        user.user_list.append(self)
 
 
 
@@ -29,31 +29,31 @@ class Contact:
         self.phone_number = number
         self.email = email
 
-    def delete_contact(self):
+    def delete_user(self):
 
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        delete_user method deletes a saved user from the user_list
         '''
 
-        Contact.contact_list.remove(self)
+        user.user_list.remove(self)
 
 
-    def test_contact_exists(self):
+    def test_user_exists(self):
         '''
-        test to check if we can return a Boolean  if we cannot find the contact.
+        test to check if we can return a Boolean  if we cannot find the user.
         '''
 
-        self.new_contact.save_contact()
-        test_contact = Contact("Test","user","0711223344","test@user.com") # new contact
-        test_contact.save_contact()
+        self.new_user.save_user()
+        test_user = user("Test","user","0711223344","test@user.com") # new usert
+        test_user.save_user()
 
-        contact_exists = Contact.contact_exist("0711223344")
+       user_exists = user.user_exist("0711223344")
 
-        self.assertTrue(contact_exists)
+        self.assertTrue(user_exists)
          
     @classmethod
-    def display_contacts(cls):
+    def display_users(cls):
         '''
-        method that returns the contact list
+        method that returns the user list
         '''
-        return cls.contact_list
+        return cls.user_list

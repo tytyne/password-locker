@@ -39,15 +39,15 @@ user
         '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(user.user_list),1)
-
-
-
-
-
-# setup and clacontacttion up here
-    def tearDowuser:
-            '''contact
-            tearDown method that does clean up after each test case has run.
+user
+user
+user
+user
+user
+# setup and clacontacttion up herecontact
+    def tearDowuser:user
+            '''contactcontact
+            tearDown method that does userclean up after each test case has run.
             '''
             user.user_list = []
 

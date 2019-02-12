@@ -1,4 +1,5 @@
 
+from user import user
 from credentials import credentials
 def create_user(fname,lname,phone,email):
     '''
@@ -40,7 +41,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes : cc - create email account, dc - display users, fc -find a user, ex -exit the user list ")
+        print("Use these short codes : cc - create email, dc - display users, fc -find a user, ex -exit the user list ")
 
         short_code = input().lower()
 
