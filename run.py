@@ -1,6 +1,24 @@
 
 from user import user
 from credentials import credentials
+
+def login_credentials(xusername,xpassword)
+'''
+    Function to create login thingz
+    '''
+
+    new_credentials = credentials(xusername,xpassword)
+    return new_credentials
+    def save_credentials(credentials)
+
+
+credentials.save_credentials()
+def del_credentials(credentials):
+    '''
+    Function to delete a user
+    '''
+    credentials.delete_credentials()
+
 def create_user(fname,lname,phone,email):
     '''
     Function to create a new user
@@ -41,11 +59,21 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes : cc - create email, dc - display users, fc -find a user, ex -exit the user list ")
+        print("Use these short codes : bc - create username and password cc - create email, dc - display users, fc -find a user, ex -exit the user list ")
 
         short_code = input().lower()
 
-        if short_code == 'cc':
+if short_code == 'bc':
+            print("New user enter  your login credentials")
+            print("-"*10)
+
+            print ("Username....")
+          xusername = input()
+
+            print("Password ...")
+            xpassword = input() #for login credentials
+
+        elif short_code == 'cc':
             print("New user")
             print("-"*10)
 
