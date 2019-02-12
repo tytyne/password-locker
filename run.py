@@ -4,7 +4,7 @@ from credentials import credentials
 
 def login_credentials(xusername,xpassword)
 '''
-    Function to create login thingz
+    Function to create login credentials
     '''
 
     new_credentials = credentials(xusername,xpassword)
