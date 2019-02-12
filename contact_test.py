@@ -1,4 +1,3 @@
-
 import unittest # Importing the unittest module
 import pyperclip
 from contact import Contact # Importing the contact class
