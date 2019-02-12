@@ -7,6 +7,14 @@ class credentials
     def __init__(self,psswrd):
   self.psswrd = psswrd
 
+ def delete_password(self):
+
+ password.password_list.remove(self)
+
+
+
+
+
 psswrd = "demo123"
 flag = 0
 while True:   
