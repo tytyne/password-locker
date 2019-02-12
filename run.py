@@ -1,50 +1,52 @@
-from contact import Contact
-def create_contact(fname,lname,phone,email):
-    '''
-    Function to create a new contact
-    '''
-    new_contact = Contact(fname,lname,phone,email)
-    return new_contact
-def save_contacts(contact):
-    '''
-    Function to save contact
-    '''
-    contact.save_contact()
-def del_contact(contact):
-    '''
-    Function to delete a contact
-    '''
-    contact.delete_contact()
 
-def find_contact(number):
+from user import user
+from credentials import credentials
+def create_user(fname,lname,phone,email):
     '''
-    Function that finds a contact by number and returns the contact
+    Function to create a new user
     '''
-    return Contact.find_by_number(number)  
-def check_existing_contacts(number):
+    new_user = user(fname,lname,phone,email)
+    return new_user
+def save_users(user):
     '''
-    Function that check if a contact exists with that number and return a Boolean
+    Function to save user
     '''
-    return Contact.contact_exist(number)
-def display_contacts():
+    user.save_user()
+def del_user(user):
     '''
-    Function that returns all the saved contacts
+    Function to delete a user
     '''
-    return Contact.display_contacts()
+    user.delete_user()
+
+def find_user(number):
+    '''
+    Function that finds a user by number and returns the user
+    '''
+    return user.find_by_number(number)  
+def check_existing_users(number):
+    '''
+    Function that check if a user exists with that number and return a Boolean
+    '''
+    return user.user_exist(number)
+def display_users():
+    '''
+    Function that returns all the saved users
+    '''
+    return user.display_users()
 def main():
-    print("Hello Welcome to your contact list. What is your name?")
+    print("Hello Welcome to your user list. What is your name?")
     user_name = input()
 
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
 
     while True:
-        print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
+        print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, ex -exit the user list ")
 
         short_code = input().lower()
 
         if short_code == 'cc':
-            print("New Contact")
+            print("New user")
             print("-"*10)
 
             print ("First name ....")
@@ -58,24 +60,24 @@ def main():
 
             print("Email address ...")
             e_address = input()
-            save_contacts(create_contact(f_name,l_name,p_number,e_address)) # create and save new contact.
+            save_users(create_user(f_name,l_name,p_number,e_address)) # create and save new user.
             print ('\n')
-            print(f"New Contact {f_name} {l_name} created")
+            print(f"New user {f_name} {l_name} created")
             print ('\n')
 
         elif short_code == 'dc':
 
-                    if display_contacts():
-                        print("Here is a list of all your contacts")
+                    if display_users():
+                        print("Here is a list of all your users")
                         print('\n')
 
-                    for contact in display_contacts():
-                        print(f"{contact.first_name} {contact.last_name} .....{contact.phone_number}")
+                    for user in display_users():
+                        print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
 
                         print('\n')
                     else:
                         print('\n')
-                        print("You dont seem to have any contacts saved yet")
+                        print("You dont seem to have any users saved yet")
                         print('\n')
 
      
@@ -84,14 +86,14 @@ def main():
             print("Enter the number you want to search for")
 
             search_number = input()
-            if check_existing_contacts(search_number):
-                search_contact = find_contact(search_number)
-                print(f"{search_contact.first_name} {search_contact.last_name}")
+            if check_existing_users(search_number):
+                search_user = find_user(search_number)
+                print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
-                print(f"Phone number.......{search_contact.phone_number}")
-                print(f"Email address.......{search_contact.email}")
+                print(f"Phone number.......{search_user.phone_number}")
+                print(f"Email address.......{search_user.email}")
             else:
-                print("That contact does not exist")
+                print("That user does not exist")
 
         elif short_code == "ex":
             print("Bye .......")
