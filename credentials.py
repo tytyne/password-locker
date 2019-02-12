@@ -4,16 +4,10 @@ class credentials
    password_list = []
   def get_password(self):
     password.password_list.append(self)
+    def __init__(self,psswrd):
+  self.psswrd = psswrd
 
- def __init__(self,psswrd):
-
-     
-
-        self.psswrd = psswrd
-
-
-
-password = "demo123"
+psswrd = "demo123"
 flag = 0
 while True:   
     if (len(password)<8): 
