@@ -6,7 +6,6 @@ def login_credentials(xusername,xpassword):
      '''
     Function to create login credentials
     '''
-
     new_credentials = credentials(xusername,xpassword)
     return new_credentials
 def save_credentials(credentials):
