@@ -3,7 +3,7 @@ from user import user
 from credentials import credentials
 
 def login_credentials(xusername,xpassword):
-     '''
+    '''
     Function to create login credentials
     '''
     new_credentials = credentials(xusername,xpassword)
@@ -60,15 +60,21 @@ def main():
 
         short_code = input().lower()
 
-if short_code == 'bc':
+        if short_code == 'bc':
             print("New user enter  your login credentials")
             print("-"*10)
 
-            print ("Username....")
-          xusername = input()
+            print (" Username ...")
+            xusername = input()
 
-            print("Password ...")
-            xpassword = input() #for login credentials
+            print (" Do you want a generated password?")
+            short_code = input().lower()
+            if short_code=="y":
+                xpassword ="demo1234"
+            print (" Your generated pasword is demo1234 ")
+            else:
+                print("Password ...")
+                xpassword = input() #for login credentials
 
         elif short_code == 'cc':
             print("New user")
