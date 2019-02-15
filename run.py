@@ -65,6 +65,13 @@ def display_users():
     return user.display_users()
 
 
+def display_credentials():
+    '''
+    Function that returns all the saved users
+    '''
+    return credentials.display_credentials()
+
+
 def main():
     print("Hello Welcome to your user list. What is your name?")
     user_name = input()
